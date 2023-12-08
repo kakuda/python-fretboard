@@ -275,11 +275,11 @@ class Fretboard(object):
                 x = self.layout.width + self.style.drawing.spacing + self.style.inlays.radius
                 y = self.layout.y + self.style.nut.size + (self.style.drawing.font_size * .2)
             else:
-                x = self.layout.x + self.style.nut.size - (self.style.drawing.font_size * 0.75)
-                y = self.layout.height + self.style.drawing.spacing + self.style.drawing.font_size * 1.0
+                x = self.layout.x * 1.5 + self.style.nut.size - (self.style.drawing.font_size * 0.75)
+                y = self.layout.height + self.style.drawing.spacing * 1.5 + self.style.drawing.font_size * 1.0
 
             self.drawing.add(
-                self.drawing.text('{0}fr'.format(self.frets[0]),
+                self.drawing.text('{0}F'.format(self.frets[0] + 1),
                     insert=(x, y),
                     font_family=self.style.drawing.font_family,
                     font_size=self.style.drawing.font_size,
