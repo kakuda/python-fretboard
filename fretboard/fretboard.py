@@ -272,8 +272,8 @@ class Fretboard(object):
     def draw_fret_label(self):
         if self.frets[0] > 0:
             if self.style.drawing.orientation == 'portrait':
-                x = self.layout.width + self.style.drawing.spacing + self.style.inlays.radius
-                y = self.layout.y + self.style.nut.size + (self.style.drawing.font_size * .2)
+                x = self.layout.width + self.style.drawing.spacing * 1.25 + self.style.inlays.radius
+                y = self.layout.y * 1.5 + self.style.nut.size + (self.style.drawing.font_size * .2)
             else:
                 x = self.layout.x * 1.5 + self.style.nut.size - (self.style.drawing.font_size * 0.75)
                 y = self.layout.height + self.style.drawing.spacing * 1.5 + self.style.drawing.font_size * 1.0
