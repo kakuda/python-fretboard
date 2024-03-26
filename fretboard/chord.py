@@ -53,7 +53,8 @@ class Chord(object):
             first_fret = 0
         else:
             first_fret = min(filter(lambda pos: pos != 0, fretted_positions))
-        return (first_fret, first_fret + 4)
+            last_fret = max(filter(lambda pos: pos != 0, fretted_positions))
+        return (first_fret, last_fret)
 
     def draw(self):
         self.fretboard = Fretboard(
